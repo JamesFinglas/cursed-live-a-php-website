@@ -1,0 +1,21 @@
+{% extends '_template.html.twig' %}
+{% block main %}
+
+    <form method="post" action="index.php">
+
+        <legend>Staff Member Update Form</legend>
+
+        <input type="hidden" name="action" value="processUserUpdate">
+
+        <p>ID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="id"  value="{{ staff.id }}"></p>
+
+        <p>username:&nbsp;&nbsp;<input type="text" name="username" required autofocus  value="{{ staff.username }}"></p>
+
+        <p>Password:&nbsp;&nbsp;<input type="text" name="password" required  value="{{ staff.password }}"></p>
+
+        <input type="submit" value="UPDATE">
+    </form>
+
+    <br>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends '_template.html.twig' %}
+{% block main %}
+
+    <h2>Cast Listing</h2>
+
+    <br>
+
+    <h2>Here you will find the most recent list of cast members of "Harry Potter & the Cursed Child. Along with a short bio for each current cast member.</h2></center>
+
+    <br>
+
+    <div class="column_container">
+        <ol class="order">
+            {% for character in characters %}
+                <li class="bullet">  {{ character.description }} </li>
+                <a href="index.php?action=showBio&id={{ character.id }}">Tid-Bit</a>
+                <br>
+            {% endfor %}
+        </ol>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends '_template.html.twig' %}
+{% block main %}
+
+    <p>Here Are selected products listed and available from  https://cursedchildstore.com/ which is the official website of the Harry Potter & The Cursed Child play.</p>
+
+    <br>
+
+    <p>These are but a selection of the products available, among which you can find Wands, Clothing, Books House souvenirs and much more. You can however use the provided accumulator to work out the costs of such items including
+       tickets. I hope you enjoy the play as much as i did.</p>
+
+    <br>
+
+    <h2>Here you will find a cost accumulator for some of the Cursed Child Related Merchandise</h2>
+
+    <br>
+
+    <hr>
+
+    <div class="column_container">
+
+        <h2>Tickets & Merchandise cost evaluator</h2>
+
+        <br>
+
+        <h3>Get ready for the big day!</h3>
+
+        <br>
+
+        <h4>Please make your selection from the following choices:</h4>
+
+        <br>
+
+            <table id="table1">
+                <tr>
+                    <th>Item</th><th>Image</th><th>Quantity</th><th>Price</th><th>Total</th>
+                </tr>
+
+                <tr>
+                    <td>{% for product in products %}{% if product.id == 1 %} {{ product.description }} {% endif %} {% endfor %}</td><td><img src="../images/CC_Hoodie_Front_small.png" alt="Small Hoodie">&nbsp;&nbsp;<a href="index.php?action=showImage&id={{ product.id }}">Enlarge</a></td>
+                    <td><input type="number" onchange="liveChange()" name="hoodie" id="hoodie" size="10" Min="0" Max="100" required autofocus="autofocus"></td>
+                    <td>&euro;{% for product in products %}{% if product.id == 1 %} {{ product.price }} {% endif %} {% endfor %}</td><td><input type="text" onchange="liveChange()" name ="hoodie2" id="total1" size="10"></td>
+                </tr>
+
+                <tr>
+                    <td>{% for product in products %}{% if product.id == 2 %} {{ product.description }} {% endif %} {% endfor %}</td><td><img src="../images/CC_men_front_small.png" alt="small mens shirt">&nbsp;&nbsp;<a href="index.php?action=showImage&id={{ product.id }}">Enlarge</a></td>
+                    <td><input type="number" onchange="liveChange()" name="tShirts" id="tShirts" size="10" Min="0" Max="100" required></td>
+                    <td>&euro;{% for product in products %}{% if product.id == 2 %} {{ product.price }} {% endif %} {% endfor %}</td><td><input type="text" onchange="liveChange()" name ="tshirts2" id="total2" size="10"></td>
+                </tr>
+
+                <tr>
+                    <td>{% for product in products %}{% if product.id == 3 %} {{ product.description }} {% endif %} {% endfor %}</td><td><img src="../images/CC_Woman_front_small.png" alt="Small womens shirt">&nbsp;&nbsp;<a href="index.php?action=showImage&id={{ product.id }}">Enlarge</a></td>
+                    <td><input type="number" onchange="liveChange()" name="tShirts3" id="tShirts3" size="10" Min="0" Max="100" required></td>
+                    <td>&euro;{% for product in products %}{% if product.id == 3 %} {{ product.price }} {% endif %} {% endfor %}</td><td><input type="text" onchange="liveChange()" name ="tshirts4" id="total3" size="10"></td>
+                </tr>
+
+                <tr>
+                    <td>{% for product in products %}{% if product.id == 4 %} {{ product.description }} {% endif %} {% endfor %}</td><td><img src="../images/Dark_Mark_Sweatshirt_small.png" alt="Small mens sweatshirt">&nbsp;&nbsp;<a href="index.php?action=showImage&id={{ product.id }}">Enlarge</a></td>
+                    <td><input type="number" onchange="liveChange()" name="sweat" id="sweat" size="10" Min="0" Max="100" required></td>
+                    <td>&euro;{% for product in products %}{% if product.id == 4 %} {{ product.price }} {% endif %} {% endfor %}</td><td><input type="text" onchange="liveChange()" name ="sweat2" id="total4" size="10"></td>
+                </tr>
+
+                <tr>
+                    <td>{% for product in products %}{% if product.id == 5 %} {{ product.description }} {% endif %} {% endfor %}</td><td><img src="../images/Albus-potter-wand_small.png" alt="Replica Albus Potter wand">&nbsp;&nbsp;<a href="index.php?action=showImage&id={{ product.id }}">Enlarge</a></td>
+                    <td><input type="number" onchange="liveChange()" name="wand" id="wand" size="10" Min="0" Max="100" required></td>
+                    <td>&euro;{% for product in products %}{% if product.id == 5 %} {{ product.price }} {% endif %} {% endfor %}</td><td><input type="text" onchange="liveChange()" name ="wand2" id="total5" size="10"></td>
+                </tr>
+
+                <tr>
+                    <td>{% for product in products %}{% if product.id == 6 %} {{ product.description }} {% endif %} {% endfor %}</td><td><img src="../images/Playscript_front_small.png" alt="Screenplay"><a href="index.php?action=showImage&id={{ product.id }}">Enlarge</a></td>
+                    <td><input type="number" onchange="liveChange()" name="screen" id="screen" size="10" Min="0" Max="100" required></td>
+                    <td>&euro;{% for product in products %}{% if product.id == 6 %} {{ product.price }} {% endif %} {% endfor %}</td><td><input type="text" onchange="liveChange()" name ="screen2" id="total6" size="10"></td>
+                </tr>
+
+                <tr>
+                    <td>{% for product in products %}{% if product.id == 7 %} {{ product.description }} {% endif %} {% endfor %}</td><td><img src="../images/ticket.jpg" alt="Premium Tickets"><a href="index.php?action=showImage&id={{ product.id }}">Enlarge</a></td>
+                    <td><input type="number" onchange="liveChange()" name="ticket" id="ticket" size="10" Min="0" Max="100" required></td>
+                    <td>&euro;{% for product in products %}{% if product.id == 7 %} {{ product.price }} {% endif %} {% endfor %}</td><td><input type="text" onchange="liveChange()" name ="ticket2" id="total7" size="10"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="4" id="colspan1">Total:&nbsp;&nbsp;&nbsp;</td><td><input type="text" onchange="liveChange()" name ="totalsum" id="total" size="10"></td>
+                    </tr>
+                </table>
+
+        <br>
+
+                <div id="buttons">
+                    <input type="button" onclick="displayTOT()" value="Submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="Reset" id="clear" value="Reset">
+                </div>
+    </div>
+
+{% endblock %}

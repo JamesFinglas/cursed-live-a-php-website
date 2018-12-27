@@ -1,0 +1,114 @@
+/**** css for nav id ****/
+.nav {
+    flex: 1;
+    -webkit-flex: 1;
+}
+
+/**** css for links within nav id ****/
+nav a:link {
+    color: #E26F2F;
+    background-color: unset;
+    text-decoration: none;
+    display: inherit;
+}
+
+/**** css for hover effects on links within nav id ****/
+nav a:hover {
+    text-decoration: underline overline;
+    text-decoration-color: #ECD19A;
+    transition-delay: 0.5s;
+}
+
+/**** css for visited effects on links within nav id ****/
+nav a:visited {
+    color:  #F4B15A;
+    text-align: center;
+    line-height: inherit;
+}
+
+/**** css for current page link highlight within nav id ****/
+nav a.current_page {
+    color: gold;
+    text-align: center;
+    line-height: inherit;
+}
+
+/**** css for unordered list arrangement of links within nav id ****/
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    display: -webkit-flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-align: center;
+    line-height: inherit;
+}
+
+/**** css for list items (links) within unordered list, within nav id ****/
+nav li {
+    flex: 1 0 10em;
+    -webkit-flex: 1;
+    text-align: center;
+    line-height: inherit;
+}
+
+#nav_2 a:link {
+    flex: 1;
+    -webkit-flex: 1;
+    color: #E26F2F;
+    background-color: unset;
+    text-decoration: none;
+    display: inherit;
+    text-align: center;
+}
+
+/**** css for hover effect on top of page link witin nav2 id ****/
+#nav_2 a:hover {
+    text-decoration: underline overline;
+    text-decoration-color: #ECD19A;
+    animation-delay: 1s;
+    text-align: center;
+}
+
+/**** css for visited effect on top of page link within nav2 id ****/
+#nav_2 a:visited {
+    color:  #F4B15A;
+    text-align: center;
+}
+
+#nav_2.p {
+    text-align: center;
+}
+
+#log {
+    text-align: right;
+    color: gold; !important;
+}
+
+#logs {
+    float: right;
+    clear: both;
+    text-align: right;
+}
+
+#log-nav:after{
+    float: right;
+    clear: both;
+}
+
+#log-nav {
+    flex: 1;
+    -webkit-flex: 1;
+}
+
+#log-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    display: -webkit-flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-align: center;
+    line-height: inherit;
+}

@@ -1,0 +1,152 @@
+{% extends '_template.html.twig' %}
+{% block main %}
+
+    <br>
+
+    <h1>ADMIN PAGE</h1>
+
+    <br>
+
+    <hr>
+
+    <h2>Product Edit Form</h2>
+
+    <br>
+
+    <table>
+        <tr>
+            <th>Id:</th>
+            <th>Description:</th>
+            <th>Price:</th>
+        </tr>
+
+        {% for product in products %}
+            <tr>
+                <td>
+                    {{ product.id }}
+                </td>
+                <td>
+                    {{ product.description }}
+                </td>
+                <td>
+                    {{ product.price }}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+
+    <p><a href="/index.php?action=InsertProduct">Insert</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/index.php?action=DeleteProduct">Delete</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/index.php?action=UpdateProduct">Update</a></p>
+
+    <br>
+
+    <hr>
+
+    <br>
+
+    <h2>Visitor Edit Form</h2>
+
+    <br>
+
+    <table>
+        <tr>
+            <th>Id:</th>
+            <th>Username:</th>
+            <th>Email:</th>
+        </tr>
+
+        {% for visitor in visitors %}
+            <tr>
+                <td>
+                    {{ visitor.id }}
+                </td>
+                <td>
+                    {{ visitor.username }}
+                </td>
+                <td>
+                    {{ visitor.email }}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+
+    <hr>
+
+    <br>
+
+    <h2>Staff Edit Form</h2>
+
+    <br>
+
+    <table>
+        <tr>
+            <th>Id:</th>
+            <th>Username:</th>
+            <th>Password:</th>
+        </tr>
+
+        {% for staff in staffs %}
+            <tr>
+                <td>
+                    {{ staff.id }}
+                </td>
+                <td>
+                    {{ staff.username }}
+                </td>
+                <td>
+                    {{ staff.password }}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br>
+
+    <p><a href="/index.php?action=InsertStaff">Insert</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/index.php?action=DeleteStaff">Delete</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/index.php?action=UpdateStaff">Update</a></p>
+
+    <br>
+
+    <hr>
+
+    <br>
+
+    <hr>
+
+    <br>
+
+    <h2>Admin Edit Form</h2>
+
+    <br>
+
+    <table>
+        <tr>
+            <th>Id:</th>
+            <th>Username:</th>
+            <th>Password:</th>
+        </tr>
+
+        {% for admin in admins %}
+            <tr>
+                <td>
+                    {{ admin.id }}
+                </td>
+                <td>
+                    {{ admin.username }}
+                </td>
+                <td>
+                    {{ admin.password }}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br>
+
+    <p><a href="/index.php?action=InsertAdmin">Insert</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/index.php?action=DeleteAdmin">Delete</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/index.php?action=UpdateAdmin">Update</a></p>
+
+    <br>
+
+    <hr>
+
+{% endblock %}

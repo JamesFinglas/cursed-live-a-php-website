@@ -1,0 +1,29 @@
+/**** css for container ****/
+.column_container{
+    text-align: center;
+    align-items: center;
+}
+
+form {
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.buttons {
+    margin-left: 100px;
+}
+
+
+table{
+    width:60%;
+    margin:auto;
+    border:1px solid black;
+}
+table td{
+    border:1px solid black;
+}
+
+table th{
+    margin:auto;
+    border:1px solid black;
+}

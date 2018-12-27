@@ -1,0 +1,23 @@
+{% extends '_template.html.twig' %}
+{% block main %}
+
+    <form method="post" action="index.php">
+
+        <legend>Product Update Form</legend>
+
+        <input type="hidden" name="action" value="processProductUpdate">
+
+        <p>ID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="id" required autofocus  value="{{ product.id }}"></p>
+
+        <p>Description:<input type="text" name="description"  value="{{ product.description }}"></p>
+
+        <p>Price:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="price"  value="{{ product.price }}"></p>
+
+        <p>Image:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="image"  value="{{ product.image }}"></p>
+
+        <input type="submit" value="UPDATE">
+    </form>
+
+    <br>
+
+{% endblock %}

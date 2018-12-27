@@ -1,0 +1,21 @@
+{% extends '_template.html.twig' %}
+{% block main %}
+
+    <form method="post" action="index.php">
+
+        <legend>Visitor Update Form</legend>
+
+        <input type="hidden" name="action" value="processVisitorUpdate">
+
+        <p>ID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="id" required autofocus value="{{ user.id }}"></p>
+
+        <p>Username:&nbsp;&nbsp;<input type="text" name="username"  required value="{{ user.username }}"></p>
+
+        <p>Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="email" required  value="{{ user.email }}"></p>
+
+        <input type="submit" value="UPDATE">
+    </form>
+
+    <br>
+
+{% endblock %}

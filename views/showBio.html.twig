@@ -1,0 +1,14 @@
+{% extends '_template.html.twig' %}
+{% block main %}
+
+    <h1>Here is a brief character biography for Character {{ character.id }}</h1>
+
+    <p>{{ character.biography }}</p>
+
+    <br>
+
+    <a href="/index.php?action=Cast">Back to Cast Page</a>
+
+    <br>
+
+{% endblock %}

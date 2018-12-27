@@ -1,0 +1,58 @@
+{% extends '_template.html.twig' %}
+{% block main %}
+
+    <h1>Merchandise Page</h1>
+
+    <p>Here Are selected products listed and available from  https://cursedchildstore.com/ which is the official website of the Harry Potter & The Cursed Child play.</p>
+
+    <br>
+
+    <p>These are but a selection of the products available, among which you can find Wands, Clothing, Books House souvenirs and much more. You can however use the provided accumulator to work out the costs of such items including
+        tickets. I hope you enjoy the play as much as i did.</p>
+
+    <br>
+
+    <h2>Here you will find a cost accumulator for some of the Cursed Child Related Merchandise</h2>
+
+    <br>
+
+    <h2>Tickets & Merchandise</h2>
+
+    <br>
+
+    <h3>Get ready for the big day!</h3>
+
+    <br>
+
+    <h4>Please make your selection from the following choices:</h4>
+
+    <br>
+
+    <div class="column_container">
+        <table>
+            <tr>
+                <th>Id:</th>
+                <th>Description:</th>
+                <th>Price:</th>
+            </tr>
+
+            {% for product in products %}
+            <tr>
+                <td>
+                    {{ product.id }}
+                </td>
+                <td>
+                    <img src="/images/{{ product.image }}" alt="image of product">
+                </td>
+                <td>
+                    {{ product.description }}&nbsp;&nbsp;&nbsp;<a href="index.php?action=showImage&id={{ product.id }}">Image</a>
+                </td>
+                <td>
+                    {{ product.price }}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+{% endblock %}

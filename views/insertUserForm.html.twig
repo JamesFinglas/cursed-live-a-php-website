@@ -1,0 +1,19 @@
+{% extends '_template.html.twig' %}
+{% block main %}
+
+    <form method="post" action="index.php">
+
+        <legend>Staff Insert Form</legend>
+
+        <input type="hidden" name="action" value="processNewUser">
+
+        <p>Username:&nbsp;<input type="text" name="username" required autofocus  value="{{ staff.username }}"></p>
+
+        <p>Password:&nbsp;&nbsp;<input type="text" name="password"  required value="{{ staff.password }}"></p>
+
+        <input type="submit" value="INSERT">
+    </form>
+
+    <br>
+
+{% endblock %}

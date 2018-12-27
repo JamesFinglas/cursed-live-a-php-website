@@ -1,0 +1,8 @@
+/**** css for header ****/
+header {
+    background-color:  unset;
+    padding: 1rem;
+    color: goldenrod;
+    text-align: center;
+    font-size: 100%;
+}

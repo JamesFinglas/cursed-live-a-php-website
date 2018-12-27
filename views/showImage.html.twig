@@ -1,0 +1,14 @@
+{% extends '_template.html.twig' %}
+{% block main %}
+
+    <h1>Here is an Image for Product {{ product.id }} </h1>
+
+    <p> <img src="/images/{{ product.image }}" alt="image of product"></p>
+
+    <br>
+
+    <li><a href="/index.php?action=Merchandise2">Back to Merchandise Page</a></li>
+
+    <br>
+
+{% endblock %}

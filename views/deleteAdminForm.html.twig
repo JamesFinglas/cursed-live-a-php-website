@@ -1,0 +1,23 @@
+{% extends '_template.html.twig' %}
+{% block main %}
+
+    <form method="post" action="index.php">
+
+        <legend>Delete Admin Form</legend>
+
+        <input type="hidden" name="action" value="processDeleteAdmin">
+
+        <p>ID:</p><input type="text" name="id" required autofocus value="{{ admin.id }}"></p>
+
+        <input type="submit" value="DELETE">
+    </form>
+
+    <hr>
+
+    <br>
+
+    <li><a href="/index.php?action=Admin">Back to Admin Page</a></li>
+
+    <br>
+
+{% endblock %}

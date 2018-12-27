@@ -1,0 +1,109 @@
+/**** css for body of page ****/
+body {
+    background-image: url("../images/harry-potter-background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Times New Roman", "Arial Black", "Lucida Console", sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    color: gold !important;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+}
+
+/**** css for color of horizontal rule ****/
+hr {
+    height:0;
+    border:0;
+    border-top:1px solid goldenrod;
+}
+
+/**** css for paragraphs ****/
+p {
+    font-family: "Times New Roman", "Arial Black", "Lucida Console", sans-serif;
+    font-size: 100%;
+    color: ghostwhite !important;
+}
+
+table {
+    background: unset;
+    color: gold;
+}
+
+.table align {
+    text-align: center;
+}
+
+h4 {
+    color: gold;
+}
+
+.bullet{
+    color: goldenrod;
+}
+
+h2 {
+    color: gold;
+    text-align: center;
+}
+
+.order {
+    padding: 0;
+    margin-top: 2em;
+    text-align: center;
+    list-style-position: inside;    /* List numbers appear with text */
+    line-height: inherit;
+}
+
+.bullet {
+    text-align: center;
+    line-height: inherit;
+}
+
+.bullet a:link {
+    color: #E26F2F;
+    background-color: unset;
+    text-decoration: none;
+    display: inline;
+}
+
+/**** css for hover effect on top of page link witin nav2 id ****/
+.bullet_2 a:hover {
+    text-decoration: underline overline;
+    text-decoration-color: #ECD19A;
+    animation-delay: 1s;
+}
+
+/**** css for visited effect on top of page link within nav2 id ****/
+.bullet a:visited {
+    color:  #F4B15A;
+}
+
+a:link{
+    color: #E26F2F;
+    background-color: unset;
+    text-decoration: none;
+    display: inline;
+    text-align: center;
+}
+
+a:hover {
+    text-decoration: underline overline;
+    text-decoration-color: #ECD19A;
+    animation-delay: 1s;
+    text-align: center;
+}
+
+a:visited{
+    color:  #F4B15A;
+    text-align: center;
+}
+
+a:hover{
+    text-decoration: underline overline;
+    text-decoration-color: #ECD19A;
+    animation-delay: 1s;
+    text-align: center;
+}
+

@@ -1,0 +1,199 @@
+<!DOCTYPE HTML> <!-- html-5 version declaration -->
+<html lang="en"> <!-- html document declaration -->
+<meta charset="UTF-8"> <!-- html 5 encoding of of characters for universal compatibility across most popular browsers -->
+    <head> <!-- head container for scripts & styles-->
+        <title>Cursed Fan - {{ pageTitle }}</title> <!-- browser tab title declaration -->
+            <style>@import "/css/style.css"; @import "/css/nav.css";
+                   @import "/css/footer.css"; @import "/css/header.css";
+                   @import "/css/layout.css";
+            </style> <!-- css import declaration -->
+        <script language="javascript" type="text/javascript">
+            function liveChange() { //new function begins for use with javascript table currently commented out of project
+
+                var p1 = 29.99;
+                var p2 = 19.99;
+                var p3 = 19.99;
+                var p4 = 26.00;
+                var p5 = 32.00;
+                var p6 = 20.00;
+                var p7 = 250.00;
+
+                var q1 = 0;
+                var q2 = 0;
+                var q3 = 0;
+                var q4 = 0;
+                var q5 = 0;
+                var q6 = 0;
+                var q7 = 0;
+
+
+                var tot1 = 0;
+                var tot2 = 0;
+                var tot3 = 0;
+                var tot4 = 0;
+                var tot5 = 0;
+                var tot6 = 0;
+                var tot7 = 0;
+
+                if(document.getElementById("hoodie").value > "") {
+                    q1 = document.getElementById("hoodie").value;
+                }
+                tot1 = eval(p1) * eval(q1);
+                tot1 = tot1.toFixed(2);
+                document.getElementById("total1").value = tot1;
+
+
+                if(document.getElementById("tShirts").value > "") {
+                    q2 = document.getElementById("tShirts").value;
+                }
+                tot2 = eval(p2) * eval(q2);
+                tot2 = tot2.toFixed(2);
+                document.getElementById("total2").value = tot2;
+
+
+                if(document.getElementById("tShirts3").value > "") {
+                    q3 = document.getElementById("tShirts3").value;
+                }
+                tot3 = eval(p3) * eval(q3);
+                tot3 = tot3.toFixed(2);
+                document.getElementById("total3").value = tot3;
+
+
+                if(document.getElementById("sweat").value > "") {
+                    q4 = document.getElementById("sweat").value;
+                }
+                tot4 = eval(p4) * eval(q4);
+                tot4 = tot4.toFixed(2);
+                document.getElementById("total4").value = tot4;
+
+
+                if(document.getElementById("wand").value > "") {
+                    q5 = document.getElementById("wand").value;
+                }
+                tot5 = eval(p5) * eval(q5);
+                tot5 = tot5.toFixed(2);
+                document.getElementById("total5").value = tot5;
+
+
+                if(document.getElementById("screen").value > "") {
+                    q6 = document.getElementById("screen").value;
+                }
+                tot6 = eval(p6) * eval(q6);
+                tot6 = tot6.toFixed(2);
+                document.getElementById("total6").value = tot6;
+
+                if(document.getElementById("ticket").value > "") {
+                    q7 = document.getElementById("ticket").value;
+                }
+                tot7 = eval(p7) * eval(q7);
+                tot7 = tot7.toFixed(2);
+                document.getElementById("total7").value = tot7;
+
+
+                grandTot = eval(tot1) + eval(tot2) + eval(tot3) + eval(tot4) + eval(tot5) + eval(tot6) + eval(tot7);
+                grandTot = grandTot.toFixed(2);
+                document.getElementById("total").value = grandTot;
+            } //new function ends
+
+            function displayTOT() {
+                var x = eval(document.getElementById("total").value);
+                alert("Your Grand total is : \u20AC " + x);
+            }
+        </script>
+    </head> <!-- closing head to end head container -->
+
+    <body> <!-- body of page begins -->
+
+    <a name="top"></a>
+
+    {% if username == 'staff' %}
+        <span>you are logged in as: <strong> {{ username }} </strong>&nbsp;&nbsp;&nbsp;
+                                   <a href="/index.php?action=processLogout">logout</a></span>
+
+
+    {% elseif username == 'admin' %}
+                             <span>you are logged in as: <strong> {{ username }} </strong>&nbsp;&nbsp;&nbsp;
+                                   <a href="/index.php?action=processLogout">logout</a></span>
+
+    {%  else %}
+    <label id="logs">
+        <div id="log">
+            <nav > <!-- nav bar begins-->
+                <ul id="log-nav">
+                           <span>Please log in - &nbsp;</span>&nbsp;
+                           <form method="post" action="index.php">
+                           <input type="hidden" name="action" value="processLogin">
+                           <span>Username: <input type="text" Size="20" MaxLenght="20" name="username" id="Username:" required autofocus></span>&nbsp;
+                           <span>Password:&nbsp;  <input type="password" Size="20" MaxLenght="20" name="password" id="Password:" required></span>&nbsp;
+                           <span><input type="submit" name="login" Value="Login"></span>&nbsp;
+                           <span>Sign Up for Email Updates- &nbsp;</span>&nbsp;
+                           <span><a href="/index.php?action=Visitor">Visitor Sign Up</a>&nbsp;&nbsp;&nbsp;</span>
+                           </form>&nbsp;
+                           </ul>
+                       </nav> <!-- closing nav bar -->
+                   </div>
+    </label>
+    {% endif %}
+
+    <br>
+
+<!-------------Header + Banner----------->
+    <header> <!--beginning of header-->
+        <h1><img src="../images/cursed-child-stage-play-eighth-story.jpg" width="100%" height="400" alt="The next chapter begins!"><!-- Banner image with subheading--></h1>
+        <h3>Disclaimer -- This website is created for educational purposes only. -- Disclaimer</h3>
+        <h3>Disclaimer -- All sources of information and material shall be referenced in text file. --Disclaimer</h3>
+        <h3>Welcome to my Harry potter and the cursed child fan blog. Here you will find information on the new play, cast and images relating to both.</h3>
+        <h3>-- Warning: Many spoilers ahead! --</h3>
+    </header>
+
+    <hr>
+
+    <div class="nav">
+        <nav> <!-- nav bar begins-->
+            <ul>
+                <li><a href="/index.php">Home</a></li>
+                <li><a href="/index.php?action=Cast">Cast</a></li>
+                <!--<li><a href="/index.php?action=Merchandise">Merchandise2</a></li>--> <!--this is the page containing the table using javascript-->
+                <li><a href="/index.php?action=Merchandise2">Merchandise</a></li>
+                <li><a href="/index.php?action=SiteMap">SiteMap</a></li>
+                <li><a href="/index.php?action=About">About</a></li>
+                {% if username == 'staff' %}
+                    <li><a href="/index.php?action=Staff">Staff</a></li>
+                {% endif %}
+                {% if username == 'admin' %}
+                    <li><a href="/index.php?action=Staff">Staff</a></li>
+                    <li><a href="/index.php?action=Admin">Admin</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+
+    <!--------------------------------------->
+
+    <hr>
+
+{% block main %}
+{% endblock %}
+
+    <hr>
+
+    <nav_2>
+        <a href="#top">Top Of Page</a>
+    </nav_2>
+
+    <!-------------------------------------------->
+
+    <hr>
+
+    <!------------------------------------------>
+
+    <div id="copyright">
+        <footer> <!-- footer to close out page -->
+            <p>All content copyright (where not sourced cited or refrenced) &copy; James Finglas</p>
+            <p class="copyright">Copyright &copy; 2017</p> <!-- copyright information paragraphs -->
+            <p class="middle">Institute of Technology Blanchardstown B00094138 ITB Computing year 2</p>
+        </footer> <!-- closing footer -->
+    </div>
+
+    </body> <!--closing of body text -->
+</html> <!-- closing of the html document - end of web page -->

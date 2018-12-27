@@ -1,0 +1,81 @@
+{% extends '_template.html.twig' %}
+{% block main %}
+
+    <br>
+
+    <h1>STAFF PAGE</h1>
+
+    <br>
+
+    <hr>
+
+    <h2>Product Edit Form</h2>
+
+    <br>
+
+    <table>
+        <tr>
+            <th>Id:</th>
+            <th>Description:</th>
+            <th>Price:</th>
+        </tr>
+
+        {% for product in products %}
+            <tr>
+                <td>
+                    {{ product.id }}
+                </td>
+                <td>
+                    {{ product.description }}
+                </td>
+                <td>
+                    {{ product.price }}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+
+    <p><a href="/index.php?action=InsertProduct">Insert</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/index.php?action=DeleteProduct">Delete</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/index.php?action=UpdateProduct">Update</a></p>
+
+    <br>
+
+    <hr>
+
+    <br>
+
+    <h2>Visitor Edit Form</h2>
+
+    <br>
+
+    <table>
+        <tr>
+            <th>Id:</th>
+            <th>Username:</th>
+            <th>Email:</th>
+        </tr>
+
+        {% for visitor in visitors %}
+            <tr>
+                <td>
+                    {{ visitor.id }}
+                </td>
+                <td>
+                    {{ visitor.username }}
+                </td>
+                <td>
+                    {{ visitor.email }}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+
+    <p><a href="/index.php?action=InsertVisitor">Insert</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/index.php?action=DeleteVisitor">Delete</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/index.php?action=UpdateVisitor">Update</a></p>
+
+    <br>
+
+{% endblock %}
+

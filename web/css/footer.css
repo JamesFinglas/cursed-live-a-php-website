@@ -1,0 +1,31 @@
+/**** css for footer ****/
+#copyright {
+    color: goldenrod !important;
+}
+
+footer {
+    display: flex;
+    -webkit-flex: 1;
+    padding: 1rem;
+    background-color: unset;
+    color: goldenrod !important;
+}
+
+/****css for paragraph within footer ****/
+footer p {
+    text-align: center;
+    flex: 1;
+    color: goldenrod !important;
+}
+
+/**** css for  paragrpah class within footer ****/
+footer.middle {
+    text-align: center;
+    color: goldenrod !important;
+}
+
+/**** css for copyright class within footer ****/
+/*footer.copyright {
+    text-align: center;
+    color: goldenrod;
+}*/

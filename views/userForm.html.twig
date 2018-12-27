@@ -1,0 +1,19 @@
+{% extends '_template.html.twig' %}
+{% block main %}
+
+    <form method="post" action="index.php">
+
+        <legend>Create User Account Form</legend>
+
+        <input type="hidden" name="action" value="processNewUser">
+
+        <p>Username:&nbsp;<input type="text" name="username" required autofocus  value="{{ user.username }}"></p>
+
+        <p>Password:&nbsp;&nbsp;<input type="text" name="password" required  value="{{ user.password }}"></p>
+
+        <input type="submit" value="CREATE">
+    </form>
+
+    <br>
+
+{% endblock %}

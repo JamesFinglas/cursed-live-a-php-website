@@ -1,0 +1,19 @@
+{% extends '_template.html.twig' %}
+{% block main %}
+
+    <form method="post" action="index.php">
+
+        <legend>Insert Visitor Form</legend>
+
+        <input type="hidden" name="action" value="processNewVisitor">
+
+        <p>Username:&nbsp;<input type="text" name="username"  required autofocus value="{{ user.username }} "></p>
+
+        <p>E-mail:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="email" required  value="{{ user.email }}"></p>
+
+        <input type="submit" value="SIGN-UP">
+    </form>
+
+    <br>
+
+{% endblock %}
